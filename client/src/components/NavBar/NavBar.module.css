@@ -1,0 +1,59 @@
+li{
+    list-style: none;
+}
+
+.a{
+   background-color: orange;
+   padding: 0.5rem 1rem;
+   border: none;
+   outline: none;
+   border-radius: 1.5em;
+   font-size: 1.2rem;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.a:hover{
+    scale: 1.05;
+    color: black;
+}
+
+.a:hover{
+    color: aqua;
+}
+
+.box{
+ position: relative;
+ padding: 0 2 rem;
+ background-color: black;
+}
+
+.navbar{
+    width: 100%;
+    height: 60px;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo{
+   text-decoration: none;
+   display: flex;
+   background-color: lightcyan;
+   color: black;
+   padding: 0.5rem 1rem;
+   border: none;
+   outline: none;
+   border-radius: 1.5em;
+   font-size: 1.5rem;
+   font-weight: bold;
+   cursor: pointer;
+}
+
+.navbar .links{
+    display: flex;
+    gap: 2rem;
+}
+

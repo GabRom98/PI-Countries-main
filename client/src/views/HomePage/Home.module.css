@@ -1,0 +1,14 @@
+.allContainer{
+    background-image: url(https://png.pngtree.com/background/20220722/original/pngtree-concept-map-of-aircraft-travel-preparation-picture-image_1714825.jpg);
+    height: 100vh;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: stretch;
+  }

@@ -1,0 +1,33 @@
+.conteinerLanding {
+  background-image: url(../../helpers/Landing.png);
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: stretch;
+}
+
+.boton{
+  display: flex;
+  background-image: url(../../helpers/MundoBoton.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  align-items: center;
+  justify-content: center;
+  width: 19em;
+  height: 21em;
+  border: none;
+  cursor: pointer;
+  margin-top: 44em ;
+}
+
+body{
+    margin: 0;
+  }
