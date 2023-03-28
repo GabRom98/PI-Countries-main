@@ -1,6 +1,7 @@
 .container{
-    margin-bottom: 1em;
-    width: 110em;
+    margin-bottom: 13.5em;
+    max-width: 110em;
+    max-height: 70em;
     background-color: white;
     border: 6px double #A40902;
     display: flex;

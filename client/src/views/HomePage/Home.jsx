@@ -121,8 +121,6 @@ function Home() {
 
         </div>
 
-        <Paginado countriesPerPage={countriesPerPage} allCountries={allCountries.length} paginado={paginado}/>
-
     </div>
   )
 }
