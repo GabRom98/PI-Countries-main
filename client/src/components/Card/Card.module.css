@@ -1,11 +1,63 @@
 .card{
-    border: 21px groove #A4A31C;
-    width: fit-content;
-    height: fit-content;
-    border-radius: 1em;
-    padding: 2px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: center;
+   width: 20em;
+   height: 18em;
+   padding: 50px 30px 50px -10em;
+   background: rgba(128, 128, 128, 0.663);
+   border-radius: 24px;
+   margin-left:.1em ;
+   margin-top: 2em;
 }
 
-.flag{
-    width: 12em;
+.card img{
+    max-height: 5em;
+    object-fit: cover;
+    border-radius: inherit;
+    box-shadow: 0 60px 40px rgb(0 0 0 / 8%);
 }
+
+.card h2 {
+    color: rgb(0 0 0 / 90%);
+    text-decoration: none;
+}
+
+.card h3 { 
+    color: rgb(0 0 0 / 90%);
+}
+
+.card p{
+ color: brown;    
+}
+
+.card button {
+    border: 0;
+    background: #5448;
+    color: #f8f8f8;
+    font-family: inherit;
+    padding: 16px 26px;
+    font-size: 16px;
+    border-radius: 40px;
+    margin-bottom: 2em;
+}
+
+@media (max-width:740px) {
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 23em;
+        padding-top: 2em;
+        margin-left:1em ;
+        margin-top: 1em;
+    }
+
+    .card img{
+       max-height: 9em;
+    }
+}
+

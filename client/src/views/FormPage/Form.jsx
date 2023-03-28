@@ -3,6 +3,7 @@ import { useState , useEffect } from 'react'
 import {Link,useNavigate} from "react-router-dom"
 import {createActivity,getCountries} from "../../redux/actions/index"
 import { useDispatch, useSelector } from 'react-redux'
+import style from "./Form.module.css"
 
 function Form() {
   const dispatch = useDispatch()
@@ -92,45 +93,30 @@ function Form() {
   };
 
   return (
-    <div>
+    <div className={style.caja}>
+    <div className={style.container}>
+
+      <div className={style.heading}>
+        Crea tu Actividad
         <Link to= "/home"><button>Volver</button></Link>
-        <h1>Crea tu Actividad</h1>
+        </div>
+
         <form onSubmit={handlerSubmit}>
-          <dir>
-            <label htmlFor="">Nombre</label>
+
+        <div className={`${style['card']} ${style['details']}`}>
+
+        <div className={`${style['card']} ${style['box']}`}>
+            <span className={style.details}>Activity Name</span>
             <input type="text" value={input.name} name="name" onChange={handleChange}/>  {errors.name && <span> {errors.name} </span>}
-          </dir>
-          <div>
-            <p>Elige el nivel dificultad de tu actividad  </p> 
-            <label htmlFor="">Nivel 1</label>
-            <input type="radio" value={1} name="difficulty" onChange={handleChange} />
-            <label htmlFor="">Nivel 2</label>
-            <input type="radio" value={2} name="difficulty" onChange={handleChange}/>
-            <label htmlFor="">Nivel 3</label>
-            <input type="radio" value={3} name="difficulty" onChange={handleChange}/>
-            <label htmlFor="">Nivel 4</label>
-            <input type="radio" value={4} name="difficulty" onChange={handleChange}/>
-            <label htmlFor="">Nivel 5</label>
-            <input type="radio" value={5} name="difficulty" onChange={handleChange}/>{errors.difficulty && <span> {errors.difficulty} </span>}
-          </div>
-          <dir>
-            <label htmlFor="">Duracion</label> 
+        </div>
+
+        <dir className={`${style['card']} ${style['box']}`}>
+            <span className={style.details}>Duracion</span> 
             <input type="text" value={input.duration} name="duration" onChange={handleChange}/>{errors.duration && <span> {errors.duration} </span>}
           </dir>
-          <div>
-            <p>Temporada del año en el que se habilita</p> 
-            <label htmlFor="">Otoño</label>
-            <input type="radio" value="Otoño" name="season" onChange={handleChange} />
-            <label htmlFor="">Invierno</label>
-            <input type="radio" value="Invierno" name="season" onChange={handleChange}/>
-            <label htmlFor="">Primavera</label>
-            <input type="radio" value='Primavera' name="season" onChange={handleChange}/>
-            <label htmlFor="">Verano</label>
-            <input type="radio" value="Verano" name="season" onChange={handleChange}/>  {errors.season && <span> {errors.season} </span>}
-          </div><br />
 
-          <div>
-            <p>Paises que tendran dicha actividad <button type="button" onClick={() => alert('Si requiere seleccionar mas de una opcion, porfavor presione ctrl + click en cada pais necesario')}>?</button>.</p>
+          <div className={`${style['card']} ${style['box']}`}>
+            <span className={style.details}>Paises que tendran dicha actividad <button type="button" onClick={() => alert('Si requiere seleccionar mas de una opcion, porfavor presione ctrl + click en cada pais necesario')}>?</button></span>
             <select name="countries" multiple size="10" onChange={handlerCountriesActivities}>  
               {countries.sort((function (a, b) {
               if (a.name > b.name) {
@@ -143,12 +129,52 @@ function Form() {
             })).map((country)=>{
                 return <option key={country.id} value={country.id}>{country.name}</option>
               })}
-            </select> {errors.countries && <span> {errors.countries} </span>}
+            </select> 
+            <br />
+            {errors.countries && <span> {errors.countries} </span>}
           </div>
-          <button type='submit'>Crear Actividad</button>
-  
+
+          <div className={`${style['circal']} ${style['form']}`}>
+            <span className={`${style['circal']} ${style['title']}`}>Elige el nivel dificultad de tu actividad  </span> 
+            <div className={style.category}>
+            <label htmlFor="">Nivel 1</label>
+            <input type="radio" value={1} name="difficulty" onChange={handleChange} />
+            <label htmlFor="">Nivel 2</label>
+            <input type="radio" value={2} name="difficulty" onChange={handleChange}/>
+            <label htmlFor="">Nivel 3</label>
+            <input type="radio" value={3} name="difficulty" onChange={handleChange}/>
+            <label htmlFor="">Nivel 4</label>
+            <input type="radio" value={4} name="difficulty" onChange={handleChange}/>
+            <label htmlFor="">Nivel 5</label>
+            <input type="radio" value={5} name="difficulty" onChange={handleChange}/>{errors.difficulty && <span> {errors.difficulty} </span>}
+            </div>
+          </div>
+
+          <div className={`${style['circal']} ${style['form']}`}>
+            <span className={`${style['circal']} ${style['title']}`}>Temporada del año en el que se habilita </span>
+            <div className={style.category}>
+            <label htmlFor="">Otoño</label>
+            <input type="radio" value="Otoño" name="season" onChange={handleChange} />
+            <label htmlFor="">Invierno</label>
+            <input type="radio" value="Invierno" name="season" onChange={handleChange}/>
+            <label htmlFor="">Primavera</label>
+            <input type="radio" value='Primavera' name="season" onChange={handleChange}/>
+            <label htmlFor="">Verano</label>
+            <input type="radio" value="Verano" name="season" onChange={handleChange}/>  {errors.season && <span> {errors.season} </span>}
+           </div>
+          </div><br />
+
+         
+          </div>
+
+          <div className={style.button}>
+          <button type='submit'>Create Activity</button>
+          </div>
+          
         </form>
-    </div>
+        
+        </div>
+        </div>
   )
 }
 

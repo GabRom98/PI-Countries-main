@@ -5,10 +5,13 @@ import style from "./Card.module.css"
 function Card({name,continent,imageFlag,id}) {
   return (
     <div className={style.card}>
-    <Link to={`/home/${id}`}><p>Name:{name}</p> </Link>
-    <p>Continent:{continent}</p>
-    <img src={imageFlag} alt="ImageFlagOfCountry" className={style.flag}/>
-</div>
+    <img src={imageFlag} alt="ImageFlagOfCountry"/>
+    <div>
+    <Link to={`/home/${id}`} ><h2>{name}</h2></Link>
+    <h3>Continent :<p>{continent}</p></h3>
+    <Link to={`/home/${id}`}><button>More Information</button></Link>
+    </div>
+    </div>
   );
 }
 

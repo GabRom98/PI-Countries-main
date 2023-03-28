@@ -1,3 +1,13 @@
+
+.box{
+    margin-top: -5em;
+    padding: 0 2 rem;
+    background-color: rgba(0, 0, 0, 0.741);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
 li{
     list-style: none;
 }
@@ -20,12 +30,6 @@ li{
 
 .a:hover{
     color: aqua;
-}
-
-.box{
- position: relative;
- padding: 0 2 rem;
- background-color: black;
 }
 
 .navbar{

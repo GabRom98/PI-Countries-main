@@ -69,21 +69,28 @@ function Home() {
     <div className={style.allContainer}>
       <div>
         <h1>Countries</h1>
+
+        <div className={style.filtros}>
         <button onClick={clickHandler}>Volver a Cargar : PAISES</button>
         <SearchBar currentPage={setCurrentPage}/>
         
+        <div className={style.select}>
         <select onChange={handlerOrderByName}>
           <option value=""  className={style.orden}>Orden</option>
           <option value="asc">Ascendente</option>
           <option value="des">Descendente</option>
         </select>
+        </div>
 
+        <div className={style.select}>
         <select onChange={handlerOrderByPopulation}>
           <option value="">Poblation</option>
           <option value="asc">Ascendente</option>
           <option value="des">Descendente</option>
         </select>
-
+        </div>
+        
+        <div className={style.select}>
         <select onChange={handlerFilterContinent}>
           <option value="">Continents</option>
           <option value="All">All Contitentes</option>
@@ -95,17 +102,26 @@ function Home() {
           <option value="North America">North America</option>
           <option value="Oceania">Oceania</option>
         </select>   
+        </div>
         
+        <div className={style.select}>
         <select onChange={handlerFilterByActivities}>
           <option value="">Activities</option>
           {activities && activities.map((act,index)=>{
             return <option key={index} value={act.name}>{act.name}</option>
           })}
         </select>
+        </div>
+
+        </div>
         
         <Paginado countriesPerPage={countriesPerPage} allCountries={allCountries.length} paginado={paginado}/>
-        </div>
+        
         <CardsContainer countries={allCountries} currentCountry={currentCountry}/>
+
+        </div>
+
+        <Paginado countriesPerPage={countriesPerPage} allCountries={allCountries.length} paginado={paginado}/>
 
     </div>
   )
