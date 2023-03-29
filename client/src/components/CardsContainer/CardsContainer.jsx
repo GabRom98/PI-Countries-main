@@ -1,11 +1,11 @@
 import Card from '../Card/Card'
 import style from "./CardsContainer.module.css"
 
-function CardsContainer({currentCountry}) {
+function CardsContainer({currentCountryPage}) {
 
   return (
     <div className={style.container}>
-        {currentCountry && currentCountry.map(countries=>{
+        {currentCountryPage && currentCountryPage.map(countries=>{
             return <Card
             key={countries.id}
             id={countries.id}

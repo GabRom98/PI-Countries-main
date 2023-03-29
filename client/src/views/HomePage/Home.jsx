@@ -30,7 +30,7 @@ function Home() {
   const [countriesPerPage,] = useState(10);
   const indexOfLastCountry = currentPage * countriesPerPage
   const indexOfFirstCountry = indexOfLastCountry - countriesPerPage
-  const currentCountry = allCountries.slice(indexOfFirstCountry,indexOfLastCountry)
+  const currentCountryPage = allCountries.slice(indexOfFirstCountry,indexOfLastCountry)
   
 
   const [,setOrder] = useState("")
@@ -117,7 +117,7 @@ function Home() {
         
         <Paginado countriesPerPage={countriesPerPage} allCountries={allCountries.length} paginado={paginado}/>
         
-        <CardsContainer countries={allCountries} currentCountry={currentCountry}/>
+        <CardsContainer currentCountryPage={currentCountryPage}/>
 
         </div>
 
