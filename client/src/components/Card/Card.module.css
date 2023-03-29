@@ -43,6 +43,15 @@
     margin-bottom: 2em;
 }
 
+.card button:hover{
+    background-color: rgba(205, 112, 13, 0.889);
+}
+
+.card button:active{
+    background-color: rgba(238, 238, 4, 0.913);
+    color: black;
+}
+
 @media (max-width:740px) {
     .card{
         display: flex;

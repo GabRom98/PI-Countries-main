@@ -4,11 +4,11 @@ import style from "./DetailCard.module.css"
 function DetailCard({name,difficulty,duration,season}) {
   return (
     <div className={style.cardActivity}>
-       <p>Actividad: {name}</p>
-       <p>Dificultad: {difficulty}</p>
-       <p>Duracion estimada: {duration} hrs</p>
-       <p>Temporada: {season}</p>
-    </div>
+       <h2>{name}</h2>
+       <p>Difficulty: <br />{difficulty}</p>
+       <p>Duration: <br /> {duration} hrs</p>
+       <p>Season: <br />{season}</p>
+    </div> 
   )
 }
 

@@ -1,153 +1,53 @@
-/* .container{
- background-image: url(https://www.todofondos.net/wp-content/uploads/1920x1200-Fondo-de-PANTALLA-DE-PAISAJE-PARA-ESCRITORIO-1024x640.jpg);   
- height: 100vh;
- width: 100%;
- text-align: center;
- background-size: 100% 100%;
- display: flex;
- align-items: center;
- flex-direction: column;
- align-content: stretch;
- margin-top:1em;
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,600&display=swap');
+/*font-family: 'Cormorant Garamond', serif;*/
+
+.container {
+  background-image: url(https://fondosmil.com/fondo/6598.jpg);
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: stretch;
+  margin-top: 2em;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 25px;
+  margin-top: .5em;
 }
 
-.heading{
-    background-color: aqua;
-    margin-top: 10em;
-    align-items: center;
-    justify-content: center;
-    width: 110em;
-    border: 6px double #A40902;
+.card{
+    background-image: url(https://cdn.pixabay.com/photo/2016/04/02/20/54/road-1303617_640.jpg);
+    color: rgba(8, 42, 77, 0.891);
+    font-weight: bold;
     display: flex;
     flex-direction: column;
-    border-radius: 1em;
-    flex-wrap: wrap;
-    gap: 1em;
-    padding: 1em;
-    height: 50em;
-} */
-
-
-.caja{
-    color: #fff;
-    display: flex;
-    height: 62.1em;
-    justify-content: center;
     align-items: center;
-    background : linear-gradient(135deg,#05073a,#dc0606ca);
-    padding: 10px;
+    justify-content: center;
+    border-radius: 1em;
+    gap: 1em;
+    margin-top: 4em;
+    padding: 1em;
+    width: 40em;
+    background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 2em;
+  color: white;
+} 
+
+.formInput{
+    background-image: url(data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUTExMWFhUWFxcYFxgXFRUVGBcaGBUXFxgYFxUYHSggGBolHRcYITEhJSkrLi4uFx8zODMtNygtLisBCgoKBQUFDgUFDisZExkrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrKysrK//AABEIAKgBLAMBIgACEQEDEQH/xAAZAAADAQEBAAAAAAAAAAAAAAABAgMABAf/xAAtEAABBAEDBAEDBQADAQAAAAABAAIDESExQVEEEmFx8BMigZGhscHhFNHxMv/EABQBAQAAAAAAAAAAAAAAAAAAAAD/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwDxpxRC0ZyrSaINeLSAeFrXTHoglDwlecpic4Tw1aCQwcqr8BNMp3/loFAPCrDorjRc9/BwgU5OEzDRyrdPS01WECTaUk7TxhODpf78LqdoghGQQpVeidp/2lfpgKQc8Rz7TTcJ5qv5qgw5F/m0ESDx5V7FWrSjC5r22/a0EwDsE8PC6YBhRkIvH4QTlOfSSiNVeKr/AO+VTqBhBF5FWogHhUJ/xdDdEHNDwpvOcKjjk1+yaGrQQGDlPLoqdRSkT/l8IJ0eFSPRX2XNf+1wgR2ThZpyrQJZqtAsx2UnDwnvS1V+iCF4USqErMKAuGia7pK0WVV8Y1QV7RSmw7crE4pVZEKQaFuNEJG54WZgnhFjLJtBhkgqr2CtEksYGizzY/lAAcV89K0LMaLCAUliNX8ygDhTr+ekzGguRhivXlGSOiKQNOzGimTiuEzz3VsFY9OKQZjBWil/8klNG7Fa3omghBycoFhYLO6bqIxxug5na4V7pEjucOCgm835r5a6PpitPnKEkArjCQOPbXykE2Y/Py08DBnG6eKAVZzhIG9rvCBZ2Cwkd9xBKoGdzs+6RnhAFjCAvYK0XO00K5VJHGq4TtgFIJwMFaKcjaPCdv2k8IMjsm0CAWQU8rRWiE8QGRylkNoJ3ivnpUjbjRMYBSnGaQI4USUGiynijvVLIyjhBp24UXnFcKkmSFnxCkC9uFzkKoOKSNZaAgEKj3XVKZOcJy0hBQQ+cqkT8Je/FoMYasIGZHeSmALT4WgdsgSScBA8hJNBYw0MFKQW1f4VpX49oM2Q9vlBkNiyUBG6r+UqdO/HpAI7aaKLgXHwlALiaFJhbTkeEBfDWQVR8h7fO/8AaHUO2rVAxOq/1CAt6fk5/hNCSCQU0Un26aKbGF11hAQwuJWfEW5BRjJDqI1TTus1SDTSEgAIf8bzlB8bhrnc+1USfbdIJwvoEFI2IuslFkbjkY3/ACmgdRohBNzC0ik07rIAWlJLqA0SPYW65QF3T+crMk+3OqpJJ9t0otjdVjbRArIbyUAC0+FSB21aKbrJwPCASW40Er4aGCi4FpF/hNO/HtAv1D2+VNsNiyU303Vf7eEYn49IEYSDRSuBcVqLiaQyDlAr460WkfhNO7ZSewoFMflTyrB2FGr2QNG6irSOUnFEO0QP+F0xusJbwpNd/qBy6zhPC/PFpoDhLKcoHndsks8eR4RY7IJ/KvJogYPFWoAk6C0Gv2+WumA4QL0z80jO/NcbJHuzYTwuHd81QICRVj5wut0gq0nUaKRfiv04QBt8e/K6eleNE8ZwucvokjnZAZn2cZ2WY+iLxWvlU6Yiym6kihp/iAzvAHtc2eMaefaYvv8Aq+F2A48II9O8EelCR9k1njwiH1+91wq9MRnT/EEY30c42T9U/FcrdSRY/dS77IvnfhAjr4xt4XQx4ItO84XGH1j9aQBxsmkYX5rS1aA4UZyL+aoN1L9lAk8eVVrsgn8qk2iAF4q1y2eE3dt/5atEcIJQO2STOz6Re7JI/CEbsoJXWqeR2LTdRoudzv8AECH0s16teFzlAzBZVpGilEt4VCbpA14rhdEbBWil9IUjE7H8ICMEp4WizeUIYwcnK3bRFIKTsH7pXG8ccLOyRnCd0IpBcRitFBhr5+6LX/bXyk8UQqzm0DdMwZxujMwWNkjR2u1wj29zslBie4i/S63RitFzyxACxhF7/tr54QCN1CuVfpYxWnKVkAr+0Ij2k8IDK0B2MYvwg0BzgTv8ytHH3E2U08QGRjKC00Y7dNlzA47fnpUmdYA0rB9p/wDjNpBoIx26bKDwGuJG3yk8Lqvf/tLDEDk5ygEbQXWc4vwm6pgrThLLHRFFCY9xGw+Wgm84rhXbGK0SugbSnG7FfogS+0kjlaFgs7poogcnKQt7XCkG6lg/NqTzf44Tv+5wzhaWIVhA5YK0XM01+U/d9tfKWZEKygEDBn2kmaLGyIHafCUts5QI42Qme0VohNGBkYSSOwgleK5QY0J/pilEhA+SVQsrRTaaOVaR2yBzJjyi2E8+lPtKvE/CDREg0VgC4pWgm6TRuo5GqBnMLdE8kljCWZ2apBzHDJ9oKCA85TQvrBTNl+21JjSdPaB2MLtUxaWkLdO+jRHlGV9mgNEDzPugET051vO6kWluvtdL5fttAIpcZ1CWOEuySlZG6rG2ir0j9q0QBttdnTcppSXOACRzi52B4Wy0ixdaIHf05AsG+fKYTHt8puokxpqFH6bqv8V4QFnTkiyfSEZLXUVTppMVwoG3E0PBQF9udjTlCSEtyFg4tdkeE3Vv2rVAskv2+flpB05rXO3hZ8bqs77Kkcv2oJROIJBSUXE7LAF10tG4h1EaoFfGW5C00ljCbqHWapSe1w19oCYDzlCN9CiqGT7bpQa0nT2gwYXapXAtKeF1GqSSus4GiATOvAU3RHlFwI1TSPwgiH4Uw0lN2lI19IHc5EFLEcq8miCndi1Np8e0vdsuqPRAIHbISOzzskLqJKpARaANdRF4XRI+h7U51Puv+rQMD4x/a6endY9ItOPC5w+vmyB3Ps4zwmifRzjZN0xGUZyLCB+ofQq9VInxjZAPsi12OIpBo5ARdqBfZNZKRr6xzrS6elIrZAvTyZ4vZN1Mg0/KSdwv8fuhG8FwJ/Pj/EALjxW4XV9QVaEx+3Zcv1BVXj9rQYOOwvn1wq9PIMj8qnTn7VzyvAcSP/UB6iTIHGyl3VV4r+FSFw7r8fun6o42QF8gq1yA+Mbouft+i6WkUgjA/FKUz7POyzn0SQmgIsoJNfRF45VZnUPa3U0ucuv8aekAvxj+1WJ1j0qk4XJ3UgD3WTSDH54VYKST1YQCd2y53Hwqd11aeTRBLuwoEpiVmEUgLm6JrukgFlUdGgv2BLGaFcpS7FKjIhSBoGhZ4o4SswTwixtk2gYZIVXsFaKUsdZCMjrH8oC12KVoGCtEggFIROq90DGg6wmYAXZzi/CSGO9TumeyiKKC07BWiRzsVwlkd3UqnpxSCsbBWik09pJCWKQ1X6JoIgcnKBoWizeU3UsHGbUi3tcKKLvucM4QaR144xj+V0/TFVWFCSAVjhKJD218pBo3VfnGf5T9OwZxm0IoQRZykb9rtcIGnYLGyR7u4gn0tXc42aC00IAsYQVfGK0XMx1CuU0jz21+qIgFINAwVopyNAdjG6zD2k8JWssmyg2C4HlNKwVokmjrIQlddIF7sUnjYK0W+gKU43VaAHBKDQCcoxx3qleyiKQadopSecVwnkNkIPiFIF7RSgQqB2EjWXugIBCq914CkTlNRCCv0jzlUikwlL8WlYCgdrCdUzbacrQO2Qc6zgIHkJJoLGIga+0mQRarK/HtA7Zft8pWRE5JpIGu4VenfiuEBiJaaKzyXHCnZcTQ8JmuIOR4QO6MjQqj5vt8/LSdQ/blIWu4QUbAdbzsngeQSCtFJ9vpSbbrrdBSi4/NFnMLaI028JY306iNU3UPzVeUFJpbArdJ9A63n+lNwcNffpXEv22gEEtAg7KYaXWTolaCdPftNA+jRHlACC0jdN1DyaASTPt1AZCVwI12ygZ0J5zuiyX7c6/KRkk+21FrXVYGiAtjLslAW05TdO7alNzrOB4QNK4k0Ej4iN/aBtpFp5349oN9X7fKk2Inf0t2u48Umifj0gWMkGilfZOEMkmgtdHIQK9hGi0j8Jp3bKTmlApjKnZCsHYUfwgMbsq8jsKLkQ60DX4XTG/CS1JrqQOXWcJ4X5WhOEsjsoKzv2U+7/EGvsgqzzhBUSCrUO7jP/SQP2V4ThAenkGiM0gv0ovfRtNG7NoCH1VrqdIKtQmOFIyYr9EDtf4vldHTSYpKx2FAyUSQgtNJnlBklEXjlLA4WU3UFBeaQALm7vBr+0hkv8ael092NkDQSAhQkks4/CmJKVIHa6INFJR4VOofilKdwsKf1LItAS7xjZdDJAQlc7C5g/bnVAzn2TSaF+fa0Jwpyuz81QU6h+yiXePSLX2QU8pwgcvFWubu/KHfilWM4QCB+yWZ+Ur3USVmOygXu5VJHYQmOFFztkCErMeqqBQZuSqvApZZAC7FKzGillkCA0SjGLOVlkDSgJXOv8IrIKhorRTY6llkDwgLSAWFlkAL7pWc0Ussgkx9CuVSABZZAH4OPaF2QssgpIBX4Uw/FLLIKRAUpk0VlkGbk5RnARWQTc/FcKjWillkEg6iVowLNoLIDMAke6/wssgp2itFJrqWWQGIJZBkLLIFcbITPaKWWQRvFINaEVkH/9k=);
+    border-radius: 1.5em;
+    width: 35em;
+    background-size: cover;
+    padding: .5em;
 }
 
-.container{
-    max-width: 700px;
-    width: 100%;
-    padding: 25px 30px;
-    border-radius: 25px;
-    background: linear-gradient(135deg, #dc0606ca,#05073a);
-}
-
-.container .heading{
-    font-size: 25px;
-    font-weight: 500;
-    position: relative;
-    text-align: center;
-    padding: 0 0 20px 0;
-}
-
-.container .heading::before{
-    content: "";
-    position: absolute;
-    height: 3px;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    background: linear-gradient(135deg, #71b7e6, #9b5b);
-}
-
-.container form .details{
-    margin-top: 25px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-form .card-details .card-box{
- width: calc(100% / 2 - 20px);
- margin-bottom: 15px;
-}
-
-.card-details .card-box .details{
-  display: block;
-  font-weight: 500;
-  margin-bottom: 5px;
-}
-
-.card-details .card-box input{
-    height: 45px;
-    width: 100%;
-    outline: none;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    padding-left: 15px;
-    border-bottom-width: 2px;
-    transition: all 0.3s ease;
-}
-
-.card-details .card-box input:focus,
-.card-details .card-box input:valid{
-    border-color: #9b59b6;
-}
-
-form .circal-form .circal-title{
-  font-size: 20px;
-  font-weight: 500;
-  border-bottom: 2px solid;
-}
-
-form .circal-form .category{
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-form .button{
-    text-align: center;
-}
-
-form .button button{
-    color: wheat;
-    padding: 10px 0;
-    margin-top: 10px;
-    height: 100%;
-    width: 50%;
-    outline: none;
-    border: none;
-    font-size: 18px;
-    font-weight: 500;
-    border-radius: 5px;
-    letter-spacing: 1px;
-    background: linear-gradient(135deg,#05073a,#dc0606ca);
-}
-
-form .button button:hover{
-    background: linear-gradient(135deg,#05073a,#dc0606ca);
-}
-
-@media (max-width:584px){
-    .container{
-        max-width: 100%;
-    }
-    form .card-details .card-box{
-        margin-bottom: 15px;
-        width: 100%;
-    }
-    form .circal-form .category{
-        width: 100%;
-    }
-    .container form .card-details{
-        max-height: 300px;
-        overflow: scroll;
-    }
-    .card-details::_webkit-scrollbar{
-        width: 0;
-    }
+.formInput span{
+    color: red
 }

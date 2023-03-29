@@ -5,6 +5,7 @@ import style from "../../components/DetailCardContainer/DetailActivitiesContaine
 function DetailActivitiesContainer({myCountry}) {
   return (
     <div className={style.activitiesContainer}>
+      <h1>Actividades</h1>
       {myCountry.activities?.map((act,index)=>{
         return (
           <DetailCard 

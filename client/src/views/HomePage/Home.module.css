@@ -22,13 +22,13 @@
   }
 
   .filtros{
+    background-color: rgba(0, 0, 14, 0.623);
     display: flex;
     flex-direction: row;
     align-items: center;
-    background-color: rgba(0, 0, 14, 0.623);
     justify-content: space-around;
     height: 5em;
-    width: 100%;
+    max-width: 110em;
     top: 0%;
     right: 0%;
     left: 0%;
@@ -37,6 +37,8 @@
     border-left: unset;
     border-right: unset;
     margin-bottom: 1em;
+    padding: 1em;
+    gap: 1em;
   }
 
     .filtros button {
@@ -71,7 +73,7 @@
     font-family: 'Cormorant Garamond', serif;
     position: relative;
     border: 1px solid #ccc;
-    width: 120px;
+    width: 12em;
     overflow: hidden;
     background-color: #fff;
   }

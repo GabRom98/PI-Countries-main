@@ -8,7 +8,7 @@ const NavBar = () => {
         <div className={style.logo}><NavLink to="/">Countries</NavLink></div>
         <ul className={style.links}>
             <li><NavLink to="/home" className={style.a}> HOME  </NavLink> </li>
-           <li><NavLink to="/create" className={style.a}> FORM </NavLink></li> 
+           <li><NavLink to="/create" className={style.a}> Create new Activity </NavLink></li> 
         </ul>
         </div>
         </div>

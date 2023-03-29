@@ -18,18 +18,24 @@ function Detail() {
   const myCountry = useSelector((state)=> state.detail) || {}
   
   return (
-    <div>
+    <div className={style.detail}>
         {myCountry
-        ? <div className={style.detailConteiner}> 
-          <h1>{myCountry.name}</h1>
-          <p>Codigo del pais: {myCountry.id}</p>
-          <img src={myCountry.imageFlag} alt="FlagOfTheCountry"  width="200px"/>
-          <p>{myCountry.continent}</p>
-          <p>{myCountry.capital}</p>
-          <p>{myCountry.subregion}</p>
-          <p>{myCountry.area}</p>
-          <p>{myCountry.population}</p>
+        ? 
+    
+        <div className={style.detailConteiner}> 
+         <div className={style.titulo}> <img src={myCountry.imageFlag} alt="FlagOfTheCountry"  /><h1>{myCountry.name}</h1></div>
+         <div className={style.country}>
+          
+          <p>Country Code: <br />{myCountry.id}</p>
+          <p>Continent: <br />{myCountry.continent}</p>
+          <p>Capital: <br />{myCountry.capital}</p>
+          <p>Subregion: <br />{myCountry.subregion}</p>
+          <p>Area: <br />{myCountry.area}</p>
+          <p>Poblation: <br />{myCountry.population}</p>
+          </div>
+        
         <DetailActivitiesContainer myCountry={myCountry}/>
+
         </div>
         : <p>Loading...</p>
       }

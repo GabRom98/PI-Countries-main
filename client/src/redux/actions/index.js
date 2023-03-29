@@ -72,8 +72,12 @@ export function filterByActivity(payload) {
 
 export function createActivity(payload) {
   return async function (dispatch){
-    const newActivity = await axios.post("http://localhost:3001/activities",payload)
-    dispatch({type: CREATE_ACTIVITY})
-    return newActivity
+    try{
+      const newActivity = await axios.post("http://localhost:3001/activities",payload)
+      dispatch({type: CREATE_ACTIVITY})
+      return newActivity
+    } catch(error){
+      alert(`Ha ocurrido un error al crear la actividad: ${error.message}`)
+    }
   }
 }
